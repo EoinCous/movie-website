@@ -3,13 +3,20 @@ import { useMovieContext } from '../context/MovieContext'
 import { Link } from "react-router-dom"
 
 function MovieCard({movie}){
-    const {isFavourite, addToFavourites, removeFromFavourites} = useMovieContext();
+    const {isFavourite, addToFavourites, removeFromFavourites, isInWatchlist, addToWatchlist, removeFromWatchlist} = useMovieContext();
     const favourite = isFavourite(movie.id);
+    const watchlisted = isInWatchlist(movie.id);
 
     function onFavourite(e){
         e.preventDefault()
         if(favourite) removeFromFavourites(movie.id);
         else addToFavourites(movie)
+    }
+
+    function onWatchlist(e){
+        e.preventDefault()
+        if(watchlisted) removeFromWatchlist(movie.id);
+        else addToWatchlist(movie)
     }
 
     return (
@@ -20,6 +27,9 @@ function MovieCard({movie}){
                     <div className="movie-overlay">
                         <button className={`favourite-btn ${favourite ? "active" : ""}`} onClick={onFavourite}>
                             ♡
+                        </button>
+                        <button className={`watchlist-btn ${watchlisted ? "active" : ""}`} onClick={onWatchlist}>
+                            +
                         </button>
                     </div>
                 </div>

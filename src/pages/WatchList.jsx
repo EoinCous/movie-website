@@ -1,7 +1,8 @@
 import MovieCard from "../components/MovieCard";
+import { useMovieContext } from "../context/MovieContext";
 
 function Watchlist(){
-    const watchlist = [];
+    const {watchlist} = useMovieContext();
 
     if(watchlist.length > 0) {
         return (
