@@ -1,6 +1,7 @@
 import MovieCard from "../components/MovieCard"
 import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../services/api";
+import { Link } from "react-router-dom"
 import '../css/Home.css'
 
 function Home(){
@@ -66,7 +67,9 @@ function Home(){
             ) : (
             <div className="movies-grid">
                 {movies.map(movie => 
-                    <MovieCard movie={movie} key={movie.id}/>
+                    <Link to={`/movie/${movie.id}`} key={movie.id}>
+                        <MovieCard movie={movie} />
+                    </Link>
                 )}
             </div>
             )}
