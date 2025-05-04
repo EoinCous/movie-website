@@ -1,3 +1,4 @@
+import '../css/Watchlist.css';
 import MovieCard from "../components/MovieCard";
 import { useMovieContext } from "../context/MovieContext";
 
