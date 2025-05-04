@@ -1,12 +1,11 @@
-# React + Vite
+This project uses the TMDB API to gather information about movies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The most popular movie are displayed on the home page.
 
-Currently, two official plugins are available:
+You can search any movie by its title.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+If you want more information about the movie, you can click on it which will bring you the movie detail page.
 
-## Expanding the ESLint configuration
+There is a favourites page where you can add the movies that you like the most or a watchlist page for the movies you want to watch.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The technologies used in this application are: React js, Vite and css.
